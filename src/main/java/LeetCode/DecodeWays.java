@@ -40,13 +40,13 @@ public class DecodeWays {
      *
      */
 
-    public int numDecodings(String s){
-               int[] dp = new int[s.length() + 1];
+    public int numDecodings(String s) {
+        int[] dp = new int[s.length() + 1];
 
         dp[0] = 1;
-        dp[1] = s.charAt(1) == '0' ? 0 : 1;
+        dp[1] = s.charAt(0) == '0' ? 0 : 1;
 
-        for (int i = 2; i < s.length() ; i++) {
+        for (int i = 2; i <= s.length() ; i++) {
 
             int oneDigit = Integer.valueOf(s.substring(i - 1, i));
             int twoDigits =  Integer.valueOf(s.substring(i - 2, i));
@@ -60,6 +60,5 @@ public class DecodeWays {
         }
         return dp[s.length()];
     }
-
 
 }
