@@ -1,4 +1,4 @@
-package SearchAlgorithm;
+package Search;
 
 public class SortAndSquare {
 
