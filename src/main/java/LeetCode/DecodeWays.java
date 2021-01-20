@@ -40,7 +40,7 @@ public class DecodeWays {
      *
      */
 
-    public int numDecodings(String s) {
+    public static int numDecodings(String s) {
         int[] dp = new int[s.length() + 1];
 
         dp[0] = 1;
@@ -60,5 +60,11 @@ public class DecodeWays {
         }
         return dp[s.length()];
     }
+    public static void main(String[] args) {
+  int temp=numDecodings("226");
+        System.out.println(temp);
 
+
+
+    }
 }
