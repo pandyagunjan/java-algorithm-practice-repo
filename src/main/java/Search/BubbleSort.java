@@ -54,7 +54,7 @@ public class BubbleSort {
 
     public static void main(String args[])
     {
-        int[] tobeSorted = new int[]{5, 2, 5, 8, 4};
+        int[] tobeSorted = new int[]{5, 2, 1, 8, 4};
         int[] result = bubbleSort(tobeSorted);
         for(int i= 0 ; i < result.length ;i++) {
             System.out.println(result[i]);
