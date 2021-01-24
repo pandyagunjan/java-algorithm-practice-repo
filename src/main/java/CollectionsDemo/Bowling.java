@@ -24,15 +24,6 @@ public class Bowling {
 
     }
 
-
-
-// public void getWinner() {
-//         System.out.println(players.entrySet()
-//         .stream().max((entry1, entry2) -> entry1.getValue() > entry2.getValue() ? 1 : -1).get().getKey());
-//     }
-
-
-
 }
 
 class Program {
