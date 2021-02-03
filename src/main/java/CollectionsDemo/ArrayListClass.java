@@ -9,6 +9,15 @@ public class ArrayListClass {
 
 
     public static void main(String[] args) {
+
+        ArrayList test = new ArrayList();
+        test.add(1);
+        test.add("gunjan");
+        test.add(344.44f);
+
+        for (int i = 0; i < test.size() ; i++) {
+            System.out.println(test.get(i));
+        }
         ArrayList<String> colors = new ArrayList<String>();
         //Size 10
         colors.add("Red");

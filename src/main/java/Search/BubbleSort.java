@@ -52,13 +52,40 @@ public class BubbleSort {
 
 
 
-    public static void main(String args[])
+    public static <note> void main(String args[])
     {
-        int[] tobeSorted = new int[]{5, 2, 1, 8, 4};
-        int[] result = bubbleSort(tobeSorted);
-        for(int i= 0 ; i < result.length ;i++) {
-            System.out.println(result[i]);
+//        int[] tobeSorted = new int[]{5, 2, 1, 8, 4};
+//        int[] result = bubbleSort(tobeSorted);
+//        for(int i= 0 ; i < result.length ;i++) {
+//            System.out.println(result[i]);
+//        }
+
+        drawPyramid(3);
+
+
+       }
+
+    public static void drawPyramid(int noOfRows)
+    {
+
+        for(int i=1 ; i <= noOfRows ; i++)
+        {
+            for(int j=1 ; j <=2*i ;j++)
+            {
+                if(j%2!=0)
+                {
+
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print("**");
+                }
+                System.out.print("\n");
+            }
+
         }
+
     }
 
     private static int[] bubbleSort(int[] tobeSorted) {
