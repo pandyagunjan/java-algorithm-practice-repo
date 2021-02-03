@@ -98,7 +98,7 @@ class Solution {
         // System.out.println("Hello, World");
         ArrayList<Customer> customers = new ArrayList<>();
 
-        String csvFile = "/root/customers/data.csv";
+        String csvFile = "/Users/gunjan/Dev/java-algorithm-pratice-repo/data.csv";
         String line ="";
         String csvSplitBy=",";
 
@@ -127,7 +127,7 @@ class Solution {
         //      System.out.println();
         System.out.println("Total customers\n" +customers.size());
         System.out.println("Customers by city:");
-        HashMap<String ,Integer> cityCounter = new HashMap<>();
+        Map<String ,Integer> cityCounter = new TreeMap<>();
         for(int i =0 ; i < customers.size();i++)
         {
             String tempCity=customers.get(i).getCity();
@@ -141,7 +141,7 @@ class Solution {
 
         }
         System.out.println("Customers by country:");
-        HashMap<String ,Integer> countryCounter = new HashMap<>();
+        Map<String ,Integer> countryCounter = new TreeMap<>();
         for(int i =0 ; i < customers.size();i++)
         {
             String tempCountry=customers.get(i).getCountry();
@@ -180,15 +180,13 @@ class Solution {
         int cityCounter1=0;
         for(Map.Entry<String,Integer> entry : uniqueCity.entrySet())
         {
-            if(entry.getValue()==1)
+            if(entry.getValue()==1 || entry.getValue()==2)
                 cityCounter1++;
 
         }
         System.out.println("Unique cities with at least one customer:\n" +cityCounter1);
-
-
     }
 
-
+///https://www.coursehero.com/tutors-problems/Computer-Science/26639763-You-are-given-a-datacsv-file-in-the-rootcustomers-directory-contai/
 }
 
