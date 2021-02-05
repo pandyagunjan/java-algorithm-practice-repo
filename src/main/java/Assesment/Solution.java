@@ -98,7 +98,7 @@ class Solution {
         // System.out.println("Hello, World");
         ArrayList<Customer> customers = new ArrayList<>();
 
-        String csvFile = "/Users/gunjan/Dev/java-algorithm-pratice-repo/data.csv";
+        String csvFile = "/users/gunjanpandya/dev/java-algorithm-practice-repo/data.csv";
         String line ="";
         String csvSplitBy=",";
 
