@@ -1,8 +1,8 @@
-package Mix;
+package StringAlgo;
 
 public class ReverseString {
 
-
+//We can use StringBuilder too and append the letters , return the sb.toString();
     public char[] reverseString(char[] s) {
         // char s[] = {'h','e','l','l','o'};
         String str = "";

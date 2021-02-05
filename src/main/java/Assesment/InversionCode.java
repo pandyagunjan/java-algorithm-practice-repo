@@ -71,7 +71,7 @@ public class InversionCode {
         // System.out.println("Hello, World");
         ArrayList<StringFromFile> activities = new ArrayList<>();
 
-        String csvFile = "/users/gunjanpandya/dev/java-algorithm-practice-repo/data1.csv";
+        String csvFile = "/users/gunjanpandya/dev/java-algorithm-practice-repo/files/data1.csv";
         String line = "";
         String csvSplitBy = ",";
 
