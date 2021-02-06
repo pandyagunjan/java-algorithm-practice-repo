@@ -18,12 +18,12 @@ public class FirstRepeatedCharacterTest {
 //        assertEquals('J', FirstRepeatedCharacter.firstNonRepeatingChar("Java"));
 //        assertEquals('i', FirstRepeatedCharacter.firstNonRepeatingChar("simplest")); }
 //
-//        @Test public void testGetFirstNonRepeatedChar() {
-//        assertEquals('b', FirstRepeatedCharacter.getFirstNonRepeatedChar("abcdefghija"));
-//        assertEquals('h', FirstRepeatedCharacter.getFirstNonRepeatedChar("hello"));
-//        assertEquals('J', FirstRepeatedCharacter.getFirstNonRepeatedChar("Java"));
-//        assertEquals('i', FirstRepeatedCharacter.getFirstNonRepeatedChar("simplest")); }); }
-//
+        @Test public void testGetFirstNonRepeatedChar() {
+            Assert.assertEquals('b', FirstRepeatedCharacter.getFirstNonRepeatedChar("abcdefghija"));
+            Assert.assertEquals('h', FirstRepeatedCharacter.getFirstNonRepeatedChar("hello"));
+            Assert.assertEquals('J', FirstRepeatedCharacter.getFirstNonRepeatedChar("Java"));
+            Assert.assertEquals('i', FirstRepeatedCharacter.getFirstNonRepeatedChar("simplest")); }
+
 
 
 

@@ -1,6 +1,7 @@
 package StringAlgo;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstRepeatedCharacter {
@@ -8,7 +9,7 @@ public class FirstRepeatedCharacter {
     public static void main(String[] args) {
         System.out.println(firstNonRepeatedCharacter("Programming"));
     }
-//Using HashMap
+//Using HashMap , it does not store insertion order so we loop through the string again
     public static char firstNonRepeatedCharacter(String word) {
         char[] characters=word.toCharArray();
         Map<Character,Integer> charMap= new HashMap<Character,Integer>();
@@ -23,7 +24,6 @@ public class FirstRepeatedCharacter {
         }
 
         for (int i = 0; i < word.length(); i++) {
-
           char c = word.charAt(i);
           if(charMap.get(c) ==1)
           {
@@ -31,15 +31,19 @@ public class FirstRepeatedCharacter {
         }
 
         }
-//        for(Map.Entry<Character,Integer> entry : charMap.entrySet())
-//        {
-//            if(entry.getValue()==1)
-//             //   System.out.printf("%s : %d %n", entry.getKey(), entry.getValue());
-//                return entry.getKey();
-//        }
+
         throw new RuntimeException("Undefined behaviour");
     }
 
+// LinkedHashMap stores the insertion order
+
+    public static char getFirstNonRepeatedChar(String str)
+    {
+        Map<Character,Integer> counts = new LinkedHashMap<>(str.length());
+    for (char c : str.toCharArray()) { counts.put(c, counts.containsKey(c) ? counts.get(c) + 1 : 1); }
+    for (Map.Entry<Character,Integer> entry : counts.entrySet()) { if (entry.getValue() == 1) { return entry.getKey();
+    }
+    } throw new RuntimeException("didn't find any non repeated Character"); }
 
 
 
