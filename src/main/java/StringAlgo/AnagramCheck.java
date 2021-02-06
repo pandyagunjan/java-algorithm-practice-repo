@@ -50,6 +50,7 @@ public class AnagramCheck {
             return false;
         }
         char[] chars = word.toCharArray();
+
         for (char c : chars) {
             int index = anagram.indexOf(c);
             if (index != -1) {
