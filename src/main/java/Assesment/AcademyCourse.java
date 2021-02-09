@@ -16,11 +16,11 @@ public static void main(String[] args) throws IOException, IOException {
   try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
    //hashmap to store the course and its pre-req as ArrayList of String
    HashMap<String, ArrayList<String>> storeCourseSeq = new HashMap<String, ArrayList<String>>();
-   //LinkedHashSet to sttore the final result of the courses to do
+   //LinkedHashSet to store the final result of the courses to do
    Set<String> result = new LinkedHashSet<String>();
 
    // First string contains the size , so take it in int counter
-   int  sizeOfInout=Integer.valueOf(br.readLine());
+   int  sizeOfInput=Integer.valueOf(br.readLine());
 
    while ((line = br.readLine()) != null) {
     String str = line;
@@ -41,7 +41,7 @@ public static void main(String[] args) throws IOException, IOException {
    System.out.println("Size " + storeCourseSeq.size());
    //Collect the keys in arrayList to check which course does not have pre-req and just add that to the set.
    ArrayList<String> keyList = new ArrayList<String>(storeCourseSeq.keySet());
-    for(int i = 0 ;i < sizeOfInout;i++)
+    for(int i = 0 ;i < sizeOfInput;i++)
     {
      String currentIndex= String.valueOf(i);
      if(!keyList.contains(currentIndex))
@@ -52,14 +52,20 @@ public static void main(String[] args) throws IOException, IOException {
 
   // To store the pre-req for looping to be added in the result
    ArrayList<String> valueString = new ArrayList<String>();
-     for (int j = storeCourseSeq.size() - 1; j >= 0 && storeCourseSeq.size()!=1 ; j--) {
-      valueString = storeCourseSeq.get(String.valueOf(j));
-      for (String str : valueString) {
-       result.add(str);
-      }
-      if (j == 0) {
-       result.add(storeCourseSeq.entrySet().stream().findFirst().get().getKey());
-      }
+     for (int j = sizeOfInput; j >= 0 && storeCourseSeq.size()!=1 ; j--) {
+         valueString = storeCourseSeq.get(String.valueOf(j));
+         if (valueString != null ) {
+             for (String str : valueString) {
+                 result.add(str);
+             }
+         }
+         // for last iteration , we have to just add the last element in set which was not added.
+         //hence, traversing through the whole keylist and adding to result hashSet.
+         if (j == 0) {
+          //   String keytemp= storeCourseSeq.entrySet().stream().findFirst().get().getKey();
+           //  result.add(storeCourseSeq.entrySet().stream().findFirst().get().getKey());
+             keyList.stream().forEach(str -> result.add(str));
+         }
      }
      if(storeCourseSeq.size()==1)
      {
