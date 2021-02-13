@@ -42,7 +42,10 @@ public class JavaFundamentals implements TestInterface{
 
         JavaFundamentals obj= new JavaFundamentals();
         obj.methodToDisplay();
-        obj.toBeDisplayedFromInterface();
+        obj.toBeDisplayedFromInterface(); //If not overwritten , then it used interface method body
+        System.out.println(JavaFundamentals.class.getName());  //displays Mix.JavaFundamentals
+        System.out.println(JavaFundamentals.class.getSimpleName());  // displays JavaFundamentals
+        System.out.println(JavaFundamentals.class.getSuperclass());  // displays class java.lang.Object
 
     }
 

@@ -9,7 +9,7 @@ public class AnagramCheck {
     public static void main(String[] args) {
         String firstParam = "pot";
         String secondParam = "top";
-        // boolean result = checkAnagram(firstParam,secondParam);
+      // boolean result = checkAnagram(firstParam,secondParam);
      //   boolean result = IsAnagramUsingFor(firstParam, secondParam);
         boolean result = angramCheckUsingIndexOf(firstParam, secondParam);
         if (result)
@@ -54,7 +54,7 @@ public class AnagramCheck {
         for (char c : chars) {
             int index = anagram.indexOf(c);
             if (index != -1) {
-                anagram = anagram.substring(0, index) + anagram.substring(index + 1, anagram.length());
+                anagram = anagram.substring(0, index) + anagram.substring(index + 1);
             } else {
                 return false;
             }
