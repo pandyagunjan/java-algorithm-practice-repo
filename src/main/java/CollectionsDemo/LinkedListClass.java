@@ -16,6 +16,7 @@ public class LinkedListClass {
         nodes.add("Orange");
 
 
+
      Iterator<String> itr= nodes.iterator();
      while(itr.hasNext())
      {
